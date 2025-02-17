@@ -1,94 +1,31 @@
-# Aplikasi-Kalkulator-Sederhana
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator Sederhana</title>
-    <style>
-        body {
-            font-family    : Arial, sans-serif; 
-            display        : flex;
-            justify-content: center; 
-            align-items    : center; 
-            height         : 100vh; 
-        }
-        .calculator {
-            width: 300px;
-            background-color: black;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .calculator input {
-            width: 100%;
-            box-sizing: border-box;
-            height: 40px;
-            font-size: 20px;
-            text-align: right;
-            margin-bottom: 20px;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .buttons {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 8px;
-        }
-        .buttons button {
-            background-color: white;
-            font-size: 18px;
-            padding: 20px;
-            border-radius: 5px;
-        }
-        .buttons .hasil{
-            grid-column: span 4;
-        }
-    </style>
-</head>
-<body>
-    <div class="calculator">
-        <input type="text" id="display">
+# Kalkulator Sederhana
 
-        <div class="buttons">
-            <button onclick="appendToDisplay('7')">7</button>
-            <button onclick="appendToDisplay('8')">8</button>
-            <button onclick="appendToDisplay('9')">9</button>
-            <button onclick="appendToDisplay('+')">+</button>
-            <button onclick="appendToDisplay('4')">4</button>
-            <button onclick="appendToDisplay('5')">5</button>
-            <button onclick="appendToDisplay('6')">6</button>
-            <button onclick="appendToDisplay('*')">*</button>
-            <button onclick="appendToDisplay('1')">1</button>
-            <button onclick="appendToDisplay('2')">2</button>
-            <button onclick="appendToDisplay('3')">3</button>
-            <button onclick="appendToDisplay('-')">-</button>
-            <button onclick="appendToDisplay('.')">.</button>
-            <button onclick="appendToDisplay('0')">0</button>
-            <button onclick="clearDisplay   (   )">C</button>
-            <button onclick="appendToDisplay('/')">/</button>
-            <button class="hasil" onclick="calculateResult(   )">=</button>
-        </div>
-    </div>
+Proyek ini adalah sebuah kalkulator sederhana berbasis web yang dibuat menggunakan HTML, CSS, dan JavaScript. Kalkulator ini memungkinkan pengguna untuk melakukan operasi matematika dasar seperti penjumlahan, pengurangan, perkalian, dan pembagian.
 
-    <script>
-        function appendToDisplay(value) {
-            document.getElementById('display').value += value;
-        }
+## Fitur
+- Tampilan sederhana dan responsif
+- Operasi dasar matematika: `+`, `-`, `*`, `/`
+- Dukungan untuk angka desimal
+- Tombol `C` untuk menghapus input
+- Desain UI yang rapi dengan CSS
 
-        function clearDisplay() {
-            document.getElementById('display').value = '';
-        }
+## Teknologi yang Digunakan
+- **HTML**: Struktur dasar halaman web
+- **CSS**: Untuk gaya dan tata letak kalkulator
+- **JavaScript**: Untuk menangani input pengguna dan operasi kalkulasi
 
-        function calculateResult() {
-            let display = document.getElementById('display').value;
-            try {
-                let result = eval(display);
-                document.getElementById('display').value = result;
-            } catch (error) {
-                document.getElementById('display').value = 'Error';
-            }
-        }
-    </script>
-</body>
-</html>
+## Cara Menggunakan
+1. Buka file `index.html` di browser.
+2. Masukkan angka dan operator menggunakan tombol yang tersedia.
+3. Tekan tombol `=` untuk melihat hasil perhitungan.
+4. Gunakan tombol `C` untuk menghapus input dan memulai perhitungan baru.
+
+## Struktur Kode
+- **HTML**: Mengatur tampilan kalkulator dan tombol-tombolnya.
+- **CSS**: Memberikan gaya pada kalkulator agar lebih menarik dan responsif.
+- **JavaScript**:
+  - `appendToDisplay(value)`: Menambahkan nilai ke layar kalkulator.
+  - `clearDisplay()`: Menghapus semua input.
+  - `calculateResult()`: Mengevaluasi ekspresi matematika dan menampilkan hasilnya.
+
+Dibuat oleh: **[Safari]**
